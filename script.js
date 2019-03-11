@@ -28,14 +28,12 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
 	var churchillNav = document.getElementById('ConsoleDisplay');
 	
-	churchillNav.innerHTML = ('This speech was written by ' + speechesArray[0].author + ' in ' + speechesArray[0].year + '.' + ' <br />' + yearIs);
-  
-  console.log('This speech was written by ' + speechesArray[0].author + ' in ' + speechesArray[0].year);
+	churchillNav.innerHTML = ('This speech was written by ' + speechesArray[0].author + ' in ' + speechesArray[0].year + '.' + ' <br />');
 
-  var yearIs = if(speechesArray[0].yearIsBCE === true){
-    console.log('This speech took place before the common era.');
+  if(speechesArray[0].yearIsBCE === true){
+    churchillNav.innerHTML += ('This speech took place before the common era.' + ' <br />');
   }else{
-    console.log('This speech took place during the common era.');
+    churchillNav.innerHTML += ('This speech took place during the common era.' + ' <br />');
   }
 
   var oldest = speechesArray[0].year,
@@ -51,16 +49,18 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
   }
 
   if(speechesArray[0].year === oldest){
-    console.log('This is the oldest speech on the page.');
+    churchillNav.innerHTML += ('This is the oldest speech on the page.');
   }
   if(speechesArray[0].year === newest){
-    console.log('This is the most recent speech on the page.');
+    churchillNav.innerHTML += ('This is the most recent speech on the page.');
   }
 });
 
 document.getElementById('BtnGhandi').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Ghandi" button.
-  console.log('This speech was written by ' + speechesArray[1].author + ' in ' + speechesArray[1].year);
+	var ghandiNav = document.getElementById('ConsoleDisplay');
+	
+	ghandiNav.innerHTML = ('This speech was written by ' + speechesArray[1].author + ' in ' + speechesArray[1].year + '.' + ' <br />');
 
   if(speechesArray[1].yearIsBCE === true){
     console.log('This speech took place before the common era.');
