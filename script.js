@@ -28,11 +28,11 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
 	var churchillNav = document.getElementById('ConsoleDisplay');
 	
-	churchillNav.innerHTML += "Listen up, Chumps.";
+	churchillNav.innerHTML = ('This speech was written by ' + speechesArray[0].author + ' in ' + speechesArray[0].year + '.' + ' <br />' + yearIs);
   
   console.log('This speech was written by ' + speechesArray[0].author + ' in ' + speechesArray[0].year);
 
-  if(speechesArray[0].yearIsBCE === true){
+  var yearIs = if(speechesArray[0].yearIsBCE === true){
     console.log('This speech took place before the common era.');
   }else{
     console.log('This speech took place during the common era.');
