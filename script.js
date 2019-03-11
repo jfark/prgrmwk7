@@ -23,6 +23,9 @@ var churchillSpeech = {
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
 	var donateNav = document.getElementById('ConsoleDisplay');
+	var donateOver100 = document.createElement("h3");
+	
+	var donateUnder100 = document.createElement("h3");
 	
 	var donationAmount = prompt("How much would you like to donate?");
 	
