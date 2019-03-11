@@ -26,7 +26,7 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
-	var churchillNav = document.getElementByID('ConsoleDisplay');
+	var churchillNav = document.getElementById('ConsoleDisplay');
 	
 	churchillNav.innerHTML += "Listen up, Chumps.";
   
