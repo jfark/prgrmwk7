@@ -22,23 +22,21 @@ var churchillSpeech = {
 
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
-	var donateNav = document.getElementById('SideNav');
+	
+	var donateNav = document.getElementById('SideNav'),
+	var donateAfter = document.createElement("h3");
+	
+	donateNav.appendChild(donateAfter);
 	
 	var donationAmount = prompt("How much would you like to donate?");
 	
-	var donateUnder100 = document.createElement("h3");
-	var donateNoticeUnder100 = ("Thank you for your donation of $" + donationAmount + ".");
-	var donateTextUnder = document.createTextNode(donateNoticeUnder100);
-	
-	
-	var donateOver100 = document.createElement("h3");
-	var donateNoticeOver100 = "Thank you for your very generous donation!";
-	var donateTextOver = document.createTextNode(donateNoticeOver100);
+	var donateNoticeUnder100 = document.createTextNode("Thank you for your donation of $" + donationAmount + ".");
+	var donateNoticeOver100 = document.createTextNode("Thank you for your very generous donation!");
 	
 	if (donationAmount < 100) {
-		donateUnder100.appendChild(SideNav);
+		donateAfter.appendChild(donateNoticeUnder100);
 	} else if (donationAmount >= 100) {
-		donateOver100.innerHTML = ("Thank you for your very generous donation!")
+		donateAfter.appendChild(donateNoticeOver100);
 	}
 });
 
