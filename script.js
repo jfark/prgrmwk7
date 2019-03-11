@@ -26,6 +26,10 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
+	var churchillNav = document.getElementByID('ConsoleDisplay');
+	
+	churchillNav.innerHTML += "Listen up, Chumps.";
+  
   console.log('This speech was written by ' + speechesArray[0].author + ' in ' + speechesArray[0].year);
 
   if(speechesArray[0].yearIsBCE === true){
