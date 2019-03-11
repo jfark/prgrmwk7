@@ -33,13 +33,14 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
 	var donateNoticeUnder100 = document.createTextNode("Thank you for your donation of $" + donationAmount + ".");
 	var donateNoticeOver100 = document.createTextNode("Thank you for your very generous donation!");
 	
-	
+	var generousPerson = document.getElementsByTagName('article');
 	
 	if (donationAmount < 100) {
 		donateAfter.appendChild(donateNoticeUnder100);
 	} else if (donationAmount >= 100) {
 		donateAfter.appendChild(donateNoticeOver100);
 		donateAfter.setAttribute("style", "color: red");
+		generousPerson.setAttribute("style", "color: red");
 	}
 	
 });
