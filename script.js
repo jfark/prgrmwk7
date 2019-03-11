@@ -24,6 +24,11 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
 	var donationAmount = prompt("How much would you like to donate?");
 	
+	if (donationAmount < 100) {
+		
+	} else if (donationAmount >= 100) {
+		
+	}
 });
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
