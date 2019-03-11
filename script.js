@@ -22,10 +22,12 @@ var churchillSpeech = {
 
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
+	var donateNav = document.getElementById('ConsoleDisplay');
+	
 	var donationAmount = prompt("How much would you like to donate?");
 	
 	if (donationAmount < 100) {
-		
+		donateNav.innerHTML = ("Thank you for your donation of $" + donationAmount + ".")
 	} else if (donationAmount >= 100) {
 		
 	}
