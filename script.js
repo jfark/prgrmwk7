@@ -40,7 +40,10 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
 	} else if (donationAmount >= 100) {
 		donateAfter.appendChild(donateNoticeOver100);
 		donateAfter.setAttribute("style", "color: red");
-		generousPerson.setAttribute("style", "color: red");
+		
+		for (var i = 0; i < generousPerson.length; i += 1){
+			generousPerson[i].classList.add("generous-donation");
+		}
 	}
 	
 });
