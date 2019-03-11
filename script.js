@@ -22,8 +22,9 @@ var churchillSpeech = {
 
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
+	document.getElementById('ConsoleDisplay').innerHTML = "";
 	
-	var donateNav = document.getElementById('SideNav');
+	var donateNav = document.getElementById('ConsoleDisplay');
 	var donateAfter = document.createElement("h3");
 	
 	donateNav.appendChild(donateAfter);
